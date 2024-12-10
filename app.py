@@ -2,6 +2,15 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
+df['odometer'] = df['odometer'].fillna(df.groupby(['model', 'model_year'])['odometer'].transform('median')).fillna(df['odometer'].median())
+df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
+df['paint_color'] = df['paint_color'].fillna('No info')
+df['cylinders'] = df['cylinders'].fillna(df.groupby('model')['cylinders'].transform('median'))
+
+df['is_4wd'] = df['is_4wd'].fillna(0)
+
+
 
 st.header('Adverstisement of Used Car')
 st.write('Filter the data below to see the details of the car')
