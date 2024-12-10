@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
+df = pd.read_csv('vehicles_us.csv')
+
 df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
 df['odometer'] = df['odometer'].fillna(df.groupby(['model', 'model_year'])['odometer'].transform('median')).fillna(df['odometer'].median())
 df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
@@ -16,7 +19,7 @@ st.header('Adverstisement of Used Car')
 st.write('Filter the data below to see the details of the car')
 
 
-df = pd.read_csv('vehicles_us.csv')
+
 
 
 customer_choice = df['model'].unique()
