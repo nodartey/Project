@@ -3,8 +3,6 @@ import pandas as pd
 import plotly.express as px
 
 
-df = pd.read_csv('vehicles_us.csv')
-
 df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
 df['odometer'] = df['odometer'].fillna(df.groupby(['model', 'model_year'])['odometer'].transform('median')).fillna(df['odometer'].median())
 df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform('median'))
