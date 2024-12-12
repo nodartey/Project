@@ -14,7 +14,8 @@ Methods and Libraries Used
 3) Plotly: For interactive visualizations.
 
 # Web App
-You can have access to the web application by clicking on the link
+You can have access to the web application by copying and pasting the URL (https://project-od27.onrender.com) in your browser. Work best in GoogleChrome.
+
 Installation
 To launch this project locally, follow these steps:
 1) Clone the Repository: https://github.com/nodartey/Project.git
