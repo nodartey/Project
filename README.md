@@ -16,15 +16,36 @@ Methods and Libraries Used
 # Web App
 You can have access to the web application by copying and pasting the URL (https://project-od27.onrender.com) in your browser. Work best in GoogleChrome.
 
-Installation
+
+# Local Setup Instruction
+
+### Prerequisites
+
+1. **Python**: Ensure you have Python installed on your machine. You can download it here. (https://www.python.org/downloads/).
+2. **Git**: Ensure you have Git installed on your machine. You can download it [here](https://git-scm.com/downloads).
+
 To launch this project locally, follow these steps:
-1) Clone the Repository: https://github.com/nodartey/Project.git
 
-2) Navigate to the Project Directory: cd app.py
+1) **Clone the Repository** 
+Open a terminal and run the command :  
+git clone  https://github.com/nodartey/Project.git
+to clone the repository.
 
-3) python -m venv env
-source env/bin/activate 
+2) **Navigate to the Project Directory**
+Navigate by typing  the command:
+cd project
 
-Run the Application
+3) **Create and Activate a Virtual Environment**
+type in the command line:
+python -m venv venv
+to activate the virtual environment
 
-using python app.py
+4) **Install the Required Packages**
+Please check to make sure you have the 'requirements.txt file in your project directory and then run the  command:
+pip install -r requirements.txt
+
+5) **Run the Application**
+Run the Streamlit app with the command:
+streamlit run app.py
+
+This will start the web application and you will be able to access at  Local URL: http://localhost:8501 in your web browser.
